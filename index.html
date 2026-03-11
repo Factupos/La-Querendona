@@ -1676,6 +1676,9 @@ body.search-has-text #raffles{ display:none !important; }
   height: 172px;
   transform-origin: 60% 88%;
   animation: branchTapHandFloat 2.5s ease-in-out infinite;
+  /* --- AÑADE ESTAS DOS LÍNEAS 👇 --- */
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.98) 60%, rgba(0,0,0,0) 100%);
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.98) 60%, rgba(0,0,0,0) 100%);
 }
 .branch-tap-hand-image{
   width:100%;
