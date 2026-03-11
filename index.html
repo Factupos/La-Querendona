@@ -14,70 +14,42 @@
   <link rel="preconnect" href="https://csv-proxy.jeisendigital.workers.dev" crossorigin>
 
   <style>
-/* ====== BASE UI (Tema Premium inspirado en el banner) ====== */
+/* ====== BASE UI | TEMA GRAN RIFA PREMIUM ====== */
 :root{
-  /* Paleta central inspirada en el afiche */
-  --violet-1:#2c0c68;
-  --violet-2:#4f1fa8;
-  --violet-3:#7c34d6;
-  --electric-blue:#1f6bff;
-  --sky-blue:#52c8ff;
-  --gold-1:#ffd65a;
-  --gold-2:#ffb800;
-  --gold-3:#ff8c1a;
-  --magenta:#d83cff;
-  --pink-glow:#ff79df;
-  --white-soft:#fdfcff;
+  --brand-violet:#5B1FAF;
+  --brand-violet-2:#7B2CBF;
+  --brand-indigo:#243CFF;
+  --brand-blue:#1C6DFF;
+  --brand-cyan:#29D8FF;
+  --brand-gold:#FFD84D;
+  --brand-gold-deep:#FFB200;
+  --brand-white:#FDFDFF;
 
-  /* Compatibilidad */
-  --brand-green:#55d6ff;
-  --brand-blue:#1f6bff;
-  --brand-yellow:#ffd65a;
-  --brand-red:#ff8c1a;
+  --brand-1:var(--brand-violet);
+  --brand-2:var(--brand-blue);
+  --brand-3:var(--brand-gold);
 
-  --brand-1:var(--electric-blue);
-  --brand-2:var(--gold-1);
-  --brand-3:var(--magenta);
-
-  --accent1:var(--electric-blue);
-  --accent2:var(--gold-1);
-  --accent3:var(--magenta);
-  --accent4:var(--gold-3);
-
-  --bg-solid:#17043c;
+  --bg-solid:#160a3a;
   --bg-grad:
-    radial-gradient(circle at 18% 16%, rgba(255,255,255,.14) 0 3%, transparent 10%),
-    radial-gradient(circle at 82% 18%, rgba(255,214,90,.16) 0, transparent 18%),
-    radial-gradient(circle at 50% 0%, rgba(82,200,255,.22) 0, transparent 26%),
-    radial-gradient(circle at 20% 72%, rgba(216,60,255,.26) 0, transparent 30%),
-    radial-gradient(circle at 88% 68%, rgba(31,107,255,.24) 0, transparent 26%),
-    radial-gradient(circle at 50% 100%, rgba(255,184,0,.14) 0, transparent 34%),
-    linear-gradient(135deg, #21064d 0%, #43148b 34%, #2143b8 68%, #6b1db7 100%);
-  --bg-deep: rgba(30, 9, 72, 0.72);
+    radial-gradient(circle at 15% 18%, rgba(255,216,77,.28) 0%, transparent 18%),
+    radial-gradient(circle at 82% 12%, rgba(41,216,255,.22) 0%, transparent 24%),
+    radial-gradient(circle at 78% 70%, rgba(255,178,0,.18) 0%, transparent 22%),
+    radial-gradient(circle at 18% 82%, rgba(123,44,191,.30) 0%, transparent 26%),
+    linear-gradient(135deg, #12062f 0%, #30106a 28%, #2137d3 62%, #6121b6 100%);
+  --bg-deep:rgba(16, 7, 42, 0.72);
 
   --ink:#ffffff;
-  --muted:rgba(255,255,255,.86);
+  --muted:rgba(245,245,255,.86);
 
-  --panel:rgba(255,255,255,.12);
-  --panel-strong:rgba(255,255,255,.18);
-  --panel-border:rgba(255,255,255,.22);
-  --shadow:rgba(6,0,20,.42);
+  --accent1:var(--brand-gold);
+  --accent2:var(--brand-cyan);
+  --accent3:var(--brand-blue);
+  --accent4:var(--brand-violet-2);
 
-  --header-h:90px; --vv-top:0px; --extra-top:0px;
-  --sat: env(safe-area-inset-top, 0px);
-}
-  --ink:#ffffff;
-  --muted:rgba(255,255,255,.86);
-
-  --accent1:var(--brand-blue);
-  --accent2:var(--brand-yellow);
-  --accent3:var(--brand-green);
-  --accent4:var(--brand-red);
-
-  --panel:rgba(255,255,255,.13);
-  --panel-strong:rgba(255,255,255,.17);
-  --panel-border:rgba(255,255,255,.22);
-  --shadow:rgba(0,0,0,.35);
+  --panel:rgba(255,255,255,.11);
+  --panel-strong:rgba(255,255,255,.16);
+  --panel-border:rgba(255,255,255,.20);
+  --shadow:rgba(4,0,18,.42);
 
   --header-h:90px; --vv-top:0px; --extra-top:0px;
   --sat: env(safe-area-inset-top, 0px);
@@ -88,31 +60,24 @@
 html, body { min-height: 100%; background: var(--bg-solid); }
 body { position: relative; }
 
-/* Capa principal: atmósfera violeta/azul con brillos dorados */
+/* Capa principal: Malla de colores vibrantes */
 body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -3;
+  content: ""; position: fixed; inset: 0; z-index: -3;
   background: var(--bg-grad);
   background-size: cover;
+  filter: saturate(1.18) contrast(1.06);
 }
 
-
-/* Velos luminosos y curvas energéticas */
+/* Efecto de cristal iluminado superior */
 body::after {
-  content: "";
-  position: fixed;
-  inset: -18%;
-  z-index: -2;
+  content: ""; position: fixed; inset: -18%; z-index: -2;
   pointer-events: none;
   background:
-    radial-gradient(circle at 50% 18%, rgba(255,255,255,.18) 0%, transparent 26%),
-    radial-gradient(circle at 78% 78%, rgba(255,214,90,.10) 0%, transparent 24%),
-    conic-gradient(from 200deg at 50% 50%, rgba(255,255,255,0) 0deg, rgba(82,200,255,.05) 110deg, rgba(255,214,90,.08) 200deg, rgba(255,255,255,0) 360deg);
+    radial-gradient(circle at 22% 16%, rgba(255,216,77,.18) 0%, transparent 18%),
+    radial-gradient(circle at 80% 10%, rgba(41,216,255,.16) 0%, transparent 20%),
+    radial-gradient(circle at 50% 100%, rgba(255,255,255,.08) 0%, transparent 34%);
   mix-blend-mode: screen;
 }
-
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 html, body { height: 100%; overflow-x: hidden; overscroll-behavior-x: none; } 
 html { overflow-anchor: none; }
@@ -131,16 +96,14 @@ body {
 }
 .top-veil {
   position: fixed; left: 0; right: 0; top: 0; z-index: 25; pointer-events: none;
-  height: 220px;
-  background:
-    linear-gradient(180deg, rgba(18,4,54,.96) 0%, rgba(18,4,54,.68) 42%, rgba(18,4,54,0) 100%);
-  transform: none !important;
+  height: 200px;
+  background: linear-gradient(180deg, rgba(9, 3, 32, .96) 0%, rgba(18, 7, 52, .82) 34%, rgba(18, 7, 52, 0) 100%);
+  transform: none !important; /* Evita que el fondo oscuro se mueva con el scroll */
 }
 
-
 .message {
-  padding: 14px 16px; background: rgba(255,255,255,.12); color: #fff; 
-  border: 1px solid rgba(255,255,255,.45);
+  padding: 14px 16px; background: linear-gradient(135deg, rgba(255,216,77,.20), rgba(41,216,255,.12) 45%, rgba(123,44,191,.18)); color: #fff; 
+  border: 1px solid rgba(255,255,255,.26);
   border-radius: 14px; width: min(92vw,420px); text-align: center;
   font-size: clamp(16px,4.8vw,22px); font-weight: 900; display: none !important;
   
@@ -148,27 +111,23 @@ body {
   /* Se ubica siempre un poco debajo del header */
   top: calc(var(--header-h, 90px) + 15px) !important; 
   left: 50%; transform: translateX(-50%);
-  z-index: 110; box-shadow: 0 12px 30px rgba(0,0,0,.35);
+  z-index: 110; box-shadow: 0 12px 34px rgba(5,0,20,.36), 0 0 24px rgba(255,216,77,.16);
 }
 header {
   position: fixed !important;
   top: 0 !important;
   left: 0; right: 0; z-index: 100;
-  display: flex;
-  flex-direction: column;
+  display: flex; 
+  flex-direction: column; 
   gap: 12px;
   padding: 12px 16px;
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.16), rgba(255,255,255,.05)),
-    linear-gradient(135deg, rgba(124,52,214,.18), rgba(31,107,255,.12) 50%, rgba(255,214,90,.08));
-  backdrop-filter: blur(26px) saturate(165%);
-  -webkit-backdrop-filter: blur(26px) saturate(165%);
-  border-bottom: 1px solid rgba(255,255,255,.18);
-  box-shadow:
-    0 16px 42px rgba(7,0,26,.28),
-    inset 0 1px 0 rgba(255,255,255,.18);
+  /* Efecto Glassmorphism Ultra Premium */
+  background: linear-gradient(180deg, rgba(255,255,255,.16), rgba(255,255,255,.05) 40%, rgba(78,31,145,.18) 100%);
+  backdrop-filter: blur(26px) saturate(170%);
+  -webkit-backdrop-filter: blur(26px) saturate(170%);
+  border-bottom: 1px solid rgba(255,255,255,.16);
+  box-shadow: 0 14px 42px rgba(4,0,20,.32), inset 0 1px 0 rgba(255,255,255,.18);
 }
-
 .brand-group {
   display: flex;
   align-items: center;
@@ -193,17 +152,13 @@ header {
 .brand-info h1 {
   margin: 0;
   font-weight: 1000;
-  font-size: clamp(28px, 8vw, 42px);
+  font-size: clamp(28px, 8vw, 42px); /* Aún más grande e imponente */
   letter-spacing: 1px;
   line-height: 1;
   color: #ffffff;
   text-transform: uppercase;
-  text-shadow:
-    0 4px 16px rgba(0,0,0,.32),
-    0 0 24px rgba(82,200,255,.16),
-    0 0 18px rgba(255,214,90,.08);
+  text-shadow: 0 3px 18px rgba(7,0,26,.40), 0 0 18px rgba(41,216,255,.18); 
 }
-
 
 /* ¡Logo Súper Gigante y Protagonista! */
 @property --ring-angle {
@@ -453,55 +408,41 @@ transform:scale(.92);
 /* Barra de búsqueda */
 .search-bar {
   width: 100%;
-  height: 58px;
-  border-radius: 20px;
-  border: 1px solid rgba(255,255,255,.16);
-  padding: 0 44px;
-  font-size: 26px;
+  height: 56px; /* Más robusta */
+  border-radius: 18px; 
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 0 44px; /* Espacio para lupa y botón X */
+  font-size: 26px; /* Números gigantes y legibles */
   font-weight: 900;
-  letter-spacing: 4px;
-  text-align: center;
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.14), rgba(255,255,255,.05)),
-    linear-gradient(135deg, rgba(35,10,91,.88), rgba(20,57,168,.74) 58%, rgba(150,47,199,.70));
+  letter-spacing: 4px; /* Separación de números tipo PIN */
+  text-align: center; /* Centrado total */
+  background: linear-gradient(180deg, rgba(18,8,50,.82), rgba(10,13,64,.88)); 
   color: #ffffff;
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.18),
-    inset 0 -8px 16px rgba(0,0,0,.18),
-    0 10px 24px rgba(0,0,0,.22),
-    0 0 0 1px rgba(255,255,255,.05);
-  caret-color: var(--gold-1); -webkit-appearance: none; appearance: none;
+  box-shadow: inset 0 2px 8px rgba(0,0,0,0.5), 0 4px 15px rgba(0,0,0,.2);
+  caret-color: var(--brand-gold); -webkit-appearance: none; appearance: none;
   transition: all 0.2s ease;
 }
 
-
 .search-bar::placeholder { color: rgba(255,255,255,0.25); letter-spacing: 4px; font-weight: 700; }
-.search-bar:focus {
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.16), rgba(255,255,255,.06)),
-    linear-gradient(135deg, rgba(47,14,115,.94), rgba(29,87,214,.88) 58%, rgba(214,60,255,.72));
-  border-color: rgba(255,214,90,.72);
-  box-shadow:
-    inset 0 0 0 1px rgba(255,214,90,.68),
-    0 0 0 3px rgba(255,214,90,.10),
-    0 0 28px rgba(82,200,255,.28),
-    0 0 18px rgba(255,214,90,.22);
+.search-bar:focus { 
+  background: linear-gradient(180deg, rgba(40,18,97,.90), rgba(15,31,108,.92)); 
+  border-color: var(--accent1);
+  box-shadow: inset 0 0 0 1px rgba(255,216,77,.75), 0 0 0 4px rgba(255,216,77,.12), 0 0 28px rgba(41,216,255,.24); 
 }
-
 
 /* Botón flotante para Borrar (X) */
 .clear-search {
   position: absolute; right: 8px; top: 50%;
   transform: translateY(-50%) scale(0); /* Oculto por defecto */
   width: 32px; height: 32px; border-radius: 50%;
-  background: rgba(255, 46, 46, 0.8); color: white; border: none;
+  background: linear-gradient(135deg, #ffcb38, #ff9f0a); color: #29115a; border: none;
   font-size: 20px; font-weight: bold; cursor: pointer;
   display: flex; align-items: center; justify-content: center;
   transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
   z-index: 2;
 }
 .clear-search.show { transform: translateY(-50%) scale(1); }
-.clear-search:active { background: #FF2E2E; transform: translateY(-50%) scale(0.85); }
+.clear-search:active { background: #ffb400; transform: translateY(-50%) scale(0.85); }
 
 /* =========================================================
    BOTÓN ALEATORIO (Premium & Mágico)
@@ -520,23 +461,18 @@ transform:scale(.92);
    BOTÓN ALEATORIO (Premium & Mágico)
    ========================================================= */
 .random-button {
-  flex: 1 1 0 !important;
+  flex: 1 1 0 !important; /* Fuerza a compartir el espacio al 50% */
   min-width: 0;
-  height: 62px;
-  border-radius: 18px;
+  height: 62px; /* Botón más alto y fácil de tocar */
+  border-radius: 16px;
   font-weight: 900; font-size: 14px; letter-spacing: 1px;
   text-transform: uppercase; border: none; cursor: pointer;
-  color: #fff;
-  background: linear-gradient(135deg, #3f1aa1 0%, #215dff 58%, #59d2ff 100%);
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.28),
-    inset 0 -10px 18px rgba(0,0,0,.12),
-    0 10px 24px rgba(20,42,150,.38),
-    0 0 22px rgba(82,200,255,.16);
+  color: #ffffff;
+  background: linear-gradient(135deg, #ffd84d 0%, #ffb400 26%, #7b2cbf 68%, #284bff 100%);
+  box-shadow: inset 0 2px 0 rgba(255,255,255,.35), 0 12px 28px rgba(22,8,74,.34), 0 0 22px rgba(255,216,77,.20);
   display: flex; align-items: center; justify-content: center; gap: 8px;
   transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.2s ease;
 }
-
 .random-button:active { transform: scale(0.92); filter: brightness(1.2); }
 .contact-info { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; }
 .contact-info p { margin: 0; font-size: 13px; color: rgba(255,255,255,0.85); font-weight: 700; letter-spacing: 0.5px; }
@@ -546,31 +482,26 @@ transform:scale(.92);
    BOTÓN FINALIZAR (Llamado a la acción - Éxito)
    ========================================================= */
 .finish-top-button {
-  flex: 1 1 0 !important;
+  flex: 1 1 0 !important; /* Fuerza a compartir el espacio al 50% */
   min-width: 0;
-  height: 54px;
-  border-radius: 18px;
+  height: 54px; /* Misma altura que el aleatorio */
+  border-radius: 16px;
   font-weight: 900; font-size: 14px; letter-spacing: 1px;
   text-transform: uppercase; border: none; cursor: pointer;
-  color: #2b1600;
-  background: linear-gradient(135deg, #ffe37a 0%, #ffb800 46%, #ff8c1a 100%);
-  box-shadow:
-    inset 0 2px 0 rgba(255,255,255,.45),
-    inset 0 -8px 16px rgba(179,87,0,.18),
-    0 10px 24px rgba(255,168,20,.38),
-    0 0 22px rgba(255,214,90,.20);
-  display: none;
+  color: #ffffff;
+  background: linear-gradient(135deg, #29d8ff 0%, #1c6dff 45%, #5b1faf 100%);
+  box-shadow: inset 0 2px 0 rgba(255,255,255,.34), 0 12px 28px rgba(16,7,42,.38), 0 0 22px rgba(41,216,255,.24);
+  display: none; /* Lo maneja JS */
   align-items: center; justify-content: center; gap: 8px;
   transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
   animation: pulseFinishPremium 2s infinite;
 }
-
 .finish-top-button:active { transform: scale(0.92); animation: none; }
 
 @keyframes pulseFinishPremium {
-  0% { box-shadow: inset 0 2px 0 rgba(255,255,255,0.4), 0 0 0 0 rgba(0,212,106, 0.7); }
-  70% { box-shadow: inset 0 2px 0 rgba(255,255,255,0.4), 0 0 0 12px rgba(0,212,106, 0); }
-  100% { box-shadow: inset 0 2px 0 rgba(255,255,255,0.4), 0 0 0 0 rgba(0,212,106, 0); }
+  0% { box-shadow: inset 0 2px 0 rgba(255,255,255,0.4), 0 0 0 0 rgba(41,216,255,.58); }
+  70% { box-shadow: inset 0 2px 0 rgba(255,255,255,0.4), 0 0 0 12px rgba(41,216,255,0); }
+  100% { box-shadow: inset 0 2px 0 rgba(255,255,255,0.4), 0 0 0 0 rgba(41,216,255,0); }
 }
 /* =========================================================
    BUSCADOR Y GRILLA (NO BORRAR - Mantienen el diseño intacto)
@@ -598,24 +529,20 @@ body.search-has-text #raffles{ display:none !important; }
 .cart-panel {
   display: none;
   flex: 0 0 100%;
-  margin-top: 10px;
-  padding: 12px 0 10px;
-  border-radius: 20px;
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.13), rgba(255,255,255,.05)),
-    linear-gradient(135deg, rgba(42,12,100,.72), rgba(27,72,184,.58) 55%, rgba(165,47,208,.42));
-  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255,255,255,.14);
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.08),
-    0 14px 34px rgba(0,0,0,.34),
-    0 0 24px rgba(82,200,255,.10);
+  margin-top: 10px; 
+  /* Eliminamos el padding horizontal para que la tirilla fluya hasta los bordes */
+  padding: 12px 0 10px; 
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(17,9,46,.74), rgba(17,9,46,.60));
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,.16);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.09), 0 14px 34px rgba(7,0,26,.42);
   align-items: center;
   gap: 12px;
+  /* El overflow lo manejará ÚNICAMENTE la tirilla de adentro */
   animation: slideDownCart 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-  overflow: hidden;
+  overflow: hidden; /* Bordes redondeados siempre limpios */
 }
-
 
 @keyframes slideDownCart {
   from { opacity: 0; transform: translateY(-12px) scale(0.98); }
@@ -635,9 +562,9 @@ body.search-has-text #raffles{ display:none !important; }
 .cart-label::after {
   content: ""; display: block;
   width: 6px; height: 6px;
-  background: #00D46A;
+  background: #ffd84d;
   border-radius: 50%;
-  box-shadow: 0 0 8px #00D46A;
+  box-shadow: 0 0 10px #ffd84d;
 }
 
 /* LA MAGIA DEL SCROLL ESTÁ AQUÍ */
@@ -657,22 +584,19 @@ body.search-has-text #raffles{ display:none !important; }
 
 .cart-item {
   flex: 0 0 auto;
-  padding: 6px 6px 6px 14px;
+  padding: 6px 6px 6px 14px; 
   border-radius: 999px;
-  background:
-    linear-gradient(135deg, rgba(255,255,255,.16), rgba(255,255,255,.04)),
-    linear-gradient(135deg, rgba(80,26,161,.55), rgba(31,107,255,.26));
-  border: 1px solid rgba(255,255,255,.22);
-  box-shadow:
-    0 8px 18px rgba(0,0,0,.28),
-    0 0 18px rgba(82,200,255,.08);
+  background: linear-gradient(135deg, rgba(255,216,77,.14), rgba(255,255,255,.08) 35%, rgba(41,216,255,.10) 100%);
+  border: 1px solid rgba(255,255,255,0.25);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
   display: flex; align-items: center; justify-content: space-between; gap: 10px;
   scroll-snap-align: start;
-  transform-origin: left center;
+  
+  /* MAGIA VISUAL: Nace desde la izquierda, jamás se solapa con el borde */
+  transform-origin: left center; 
   animation: popInItem 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
   transform: scale(0);
 }
-
 
 @keyframes popInItem {
   to { transform: scale(1); }
@@ -690,17 +614,17 @@ body.search-has-text #raffles{ display:none !important; }
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
   font-size: 16px; font-weight: 900;
-  background: rgba(255, 46, 46, 0.15); 
-  color: #FF2E2E; 
+  background: rgba(255, 185, 0, 0.16); 
+  color: #FFD84D; 
   padding: 0;
   transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .cart-item-remove:active {
   transform: scale(0.85);
-  background: #FF2E2E;
-  color: #ffffff;
-  box-shadow: 0 4px 10px rgba(255, 46, 46, 0.5);
+  background: #ffb400;
+  color: #29115a;
+  box-shadow: 0 4px 10px rgba(255, 185, 0, 0.45);
 }
 
 /* Tile */
@@ -712,7 +636,7 @@ body.search-has-text #raffles{ display:none !important; }
   --size: clamp(92px, 26vw, 124px);
   width: var(--size);
   height: calc(var(--size) + 16px);
-  border-radius: 18px;
+  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -720,32 +644,26 @@ body.search-has-text #raffles{ display:none !important; }
   font-weight: 900;
   color: #fff;
   background:
-    radial-gradient(circle at 50% 24%, rgba(255,255,255,.24) 0 14%, transparent 17%),
-    radial-gradient(circle at 26% 58%, rgba(255,255,255,.08) 0 14%, transparent 16%),
-    radial-gradient(circle at 74% 58%, rgba(255,255,255,.08) 0 14%, transparent 16%),
-    linear-gradient(145deg, transparent 0 62%, rgba(255,255,255,.12) 63%, transparent 64%),
-    linear-gradient(180deg, rgba(255,255,255,.16), rgba(255,255,255,.05)),
-    linear-gradient(135deg, rgba(56,21,137,.98) 0%, rgba(36,90,221,.96) 58%, rgba(168,45,210,.92) 100%);
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.18),
-    inset 0 -14px 20px rgba(20,0,50,.18),
-    0 12px 28px rgba(8,0,34,.34),
-    0 0 24px rgba(82,200,255,.08);
+    radial-gradient(circle at 20% 18%, rgba(255,216,77,.22) 0 14%, transparent 16%),
+    radial-gradient(circle at 84% 20%, rgba(41,216,255,.16) 0 12%, transparent 16%),
+    linear-gradient(145deg, rgba(255,255,255,.06) 0 18%, transparent 19% 55%, rgba(255,255,255,.05) 56%, transparent 58%),
+    linear-gradient(160deg, rgba(255,255,255,.18), rgba(255,255,255,.06) 44%, rgba(31,14,77,.16) 100%),
+    linear-gradient(135deg, rgba(255,216,77,.22) 0%, rgba(86,31,175,.38) 38%, rgba(28,109,255,.30) 70%, rgba(41,216,255,.20) 100%);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.12), 0 14px 30px rgba(5,0,20,.42), 0 0 22px rgba(41,216,255,.08);
   outline: none;
   cursor: pointer;
   border: none;
   transform: translateZ(0);
-  overflow: hidden;
+
+  /* ✅ Integración limpia para la animación fluida */
+  overflow: hidden; 
   transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.2s ease, box-shadow 0.2s ease;
 }
 
-
 /* Pseudo-elementos originales de la boleta */
 .raffle .num { position: relative; z-index: 2; font-size: clamp(38px,8.5vw,48px); line-height: 1; text-shadow: 0 2px 10px rgba(0,0,0,.45), 0 0 18px rgba(255,255,255,.18); }
-.raffle::before { content: ""; position: absolute; inset: -1px; border-radius: inherit; padding: 6px; background: conic-gradient(from 180deg at 50% 50%, #67d8ff, #ffe178, #ffb11b, #d83cff, #67d8ff); -webkit-mask: linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; opacity: .98; }
-
-.raffle::after { content: ""; position: absolute; inset: 2px; border-radius: 16px; background: radial-gradient(60% 60% at 50% 42%, rgba(255,255,255,.16), transparent 72%); z-index: 0; }
-
+.raffle::before { content: ""; position: absolute; inset: -1px; border-radius: inherit; padding: 6px; background: conic-gradient(from 180deg at 50% 50%, #ffe37a, #29d8ff, #5b1faf, #284bff, #ffe37a); -webkit-mask: linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; opacity: .95; }
+.raffle::after { content: ""; position: absolute; inset: 2px; border-radius: 14px; background: radial-gradient(60% 60% at 50% 45%, rgba(255,255,255,.14), transparent 70%); z-index: 0; }
 
 /* ✅ El nuevo efecto al tocar (Nativo y limpio) */
 .raffle.tap-effect {
@@ -776,34 +694,30 @@ body.search-has-text #raffles{ display:none !important; }
 }
 
 .raffle.selected {
-  z-index: 20;
-  transform: translateZ(0) scale(1.05);
-  background:
-    radial-gradient(circle at 50% 22%, rgba(255,255,255,.28) 0 14%, transparent 18%),
-    linear-gradient(135deg, rgba(255,216,102,.24), rgba(31,107,255,.16) 45%, rgba(216,60,255,.20));
+  /* FUNDAMENTAL: Eleva la boleta seleccionada por encima de sus vecinas */
+  z-index: 20; 
+  transform: translateZ(0) scale(1.05); 
+  background: linear-gradient(135deg, rgba(255,216,77,.18), rgba(123,44,191,.22) 40%, rgba(28,109,255,.22));
   box-shadow:
-    inset 0 0 0 2px rgba(255,214,90,.95),
-    0 15px 35px rgba(0,0,0,.55),
-    0 0 22px rgba(255,214,90,.22),
-    0 0 18px rgba(82,200,255,.16);
-  border: 1px solid rgba(255,255,255,.42);
+    inset 0 0 0 2px rgba(255,216,77,.96), /* Borde interior dorado ultra nítido */
+    0 15px 35px rgba(0,0,0,.6), /* Sombra profunda que le da efecto 3D flotante */
+    0 0 24px rgba(255,216,77,.28); /* Resplandor exterior suave */
+  border: 1px solid rgba(255, 255, 255, 0.4); 
 }
-
 
 .raffle.selected::before {
-  background: conic-gradient(from 180deg at 50% 50%, #67d8ff, #ffe178, #ff9e1f, #d83cff, #67d8ff);
+  background: conic-gradient(from 180deg at 50% 50%, #ffe37a, #29d8ff, #5b1faf, #284bff, #ffe37a);
   opacity: 1;
-  filter: drop-shadow(0 0 12px rgba(255,214,90,.34));
+  filter: drop-shadow(0 0 14px rgba(255,216,77,.34));
 }
 
-
 .raffle.selected::after {
-  background: radial-gradient(70% 70% at 50% 45%, rgba(0,212,106,.20), transparent 72%);
+  background: radial-gradient(70% 70% at 50% 45%, rgba(255,216,77,.20), transparent 72%);
 }
 
 .raffle.selected .num {
   color: #ffffff;
-  text-shadow: 0 2px 8px rgba(0,0,0,.8), 0 0 18px rgba(0,212,106,.8);
+  text-shadow: 0 2px 8px rgba(0,0,0,.8), 0 0 18px rgba(255,216,77,.72);
   /* Un latido más sutil para no marear */
   animation: selectedPulse 2s ease-in-out infinite alternate;
 }
@@ -812,12 +726,11 @@ body.search-has-text #raffles{ display:none !important; }
 .raffle.selected .tick {
   opacity: 1;
   transform: scale(1) translateY(0);
-  background: linear-gradient(135deg, #ffe178, #ff9d18);
-  color: #3b1800;
+  background: linear-gradient(135deg, #ffd84d, #29d8ff 45%, #284bff 100%); /* Gradiente Verde-Azul premium */
+  color: #ffffff; /* Símbolo blanco puro */
   border: none;
-  box-shadow: 0 4px 10px rgba(0,0,0,.4), 0 0 12px rgba(255,214,90,.46);
+  box-shadow: 0 4px 10px rgba(0,0,0,.4), 0 0 14px rgba(255,216,77,.36);
 }
-
 
 @keyframes selectedPulse {
   from{ filter: saturate(1.05) brightness(1.00); }
@@ -878,13 +791,12 @@ body.search-has-text #raffles{ display:none !important; }
   padding:22px 14px;
   color:rgba(255,255,255,.94);
   background:
-    radial-gradient(1100px 760px at 12% 12%, rgba(255,184,0,.18) 0, transparent 60%),
-    radial-gradient(1000px 720px at 86% 22%, rgba(31,107,255,.24) 0, transparent 62%),
-    radial-gradient(900px 620px at 26% 86%, rgba(216,60,255,.24) 0, transparent 62%),
-    linear-gradient(135deg, #19043d 0%, #3f1586 38%, #2043b8 100%);
+    radial-gradient(1100px 760px at 12% 12%, rgba(255,46,46,.30) 0, transparent 60%),
+    radial-gradient(1000px 720px at 86% 22%, rgba(11,92,255,.26) 0, transparent 62%),
+    radial-gradient(900px 620px at 26% 86%, rgba(255,196,0,.22) 0, transparent 62%),
+    linear-gradient(135deg, #07152A 0%, #0B2B66 38%, var(--accent4) 100%);
   overflow:hidden;
 }
-
 .boot.show{display:flex}
 .boot::before{
   content:"";
@@ -1115,12 +1027,11 @@ body.search-has-text #raffles{ display:none !important; }
 .branch-shell{
   position:fixed; inset:0; z-index:99997; display:none; overflow-x:hidden; overflow-y:auto; background-attachment:fixed;
   background:
-    radial-gradient(100vw 100vh at 8% 6%, rgba(255,214,90,.16) 0, transparent 42%),
-    radial-gradient(100vw 100vh at 100% 0%, rgba(82,200,255,.20) 0, transparent 46%),
-    radial-gradient(100vw 100vh at 18% 100%, rgba(216,60,255,.20) 0, transparent 46%),
-    linear-gradient(135deg, #19043d 0%, #4d1d9f 48%, #274fcb 100%);
+    radial-gradient(100vw 100vh at 0% 0%, rgba(0,212,106,.15) 0, transparent 60%),
+    radial-gradient(100vw 100vh at 100% 0%, rgba(11,92,255,.18) 0, transparent 62%),
+    radial-gradient(100vw 100vh at 50% 100%, rgba(255,196,0,.12) 0, transparent 65%),
+    linear-gradient(135deg, #051021 0%, #0A1E45 50%, #051021 100%);
 }
-
 .branch-shell.show{display:block}
 .branch-shell::before{
   content:""; position:fixed; inset:-25%; pointer-events:none;
@@ -1191,40 +1102,33 @@ body.search-has-text #raffles{ display:none !important; }
 /* Tarjetas ultra-optimizadas */
 /* Tarjetas ultra-optimizadas y elásticas */
 .branch-card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 100%;
+  position: relative; 
+  display: flex; 
+  flex-direction: column; 
+  gap: 10px; /* Reducimos el espacio entre el texto y la imagen */
+  width: 100%; 
   min-height: 320px;
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.16), rgba(255,255,255,.05)),
-    linear-gradient(135deg, rgba(72,22,165,.48), rgba(36,90,221,.34) 55%, rgba(255,184,0,.16));
-  border: 1px solid rgba(255,255,255,.18);
-  border-radius: 32px;
-  padding: 12px;
-  box-shadow:
-    0 18px 42px rgba(0,0,0,.34),
-    0 0 26px rgba(82,200,255,.10),
-    inset 0 2px 0 rgba(255,255,255,.18);
-  backdrop-filter: blur(20px) saturate(150%);
-  -webkit-backdrop-filter: blur(20px) saturate(150%);
-  cursor: pointer;
+  background: linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.04));
+  border: 1px solid rgba(255,255,255,.2); 
+  border-radius: 32px; 
+  padding: 12px; /* Reducimos el padding interno para que la imagen sea más ancha */
+  box-shadow: 0 15px 40px rgba(0,0,0,.3), inset 0 2px 0 rgba(255,255,255,.15);
+  backdrop-filter: blur(20px) saturate(140%); 
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  cursor: pointer; 
   isolation: isolate;
-  overflow: hidden;
+  overflow: hidden; 
   transition: transform .2s cubic-bezier(.34,1.56,.64,1), box-shadow .2s ease, border-color .2s ease;
   animation: branchEnterIn .4s cubic-bezier(.22,1,.36,1) backwards;
 }
-
 .branch-grid .branch-card:nth-child(2) { animation-delay: 0.08s; }
 .branch-grid .branch-card:nth-child(3) { animation-delay: 0.16s; }
 
 .branch-card::before {
-  content: ""; position: absolute; inset: -1px; border-radius: inherit;
-  background: linear-gradient(135deg, rgba(255,214,90,.22), rgba(82,200,255,.18), rgba(216,60,255,.22));
+  content: ""; position: absolute; inset: -1px; border-radius: inherit; 
+  background: linear-gradient(135deg, rgba(0,212,106,.20), rgba(11,92,255,.16)); 
   opacity: 0; z-index: -2; transition: opacity .25s ease;
 }
-
 .branch-card:active, .branch-card.is-entering {
   transform: scale(.96); 
   box-shadow: 0 8px 25px rgba(0,0,0,.4), 0 0 35px rgba(11,92,255,.2); 
@@ -1244,30 +1148,36 @@ body.search-has-text #raffles{ display:none !important; }
    DETALLES: Estático, Luminoso y Ultra Premium (Blanco Azulado)
    ========================================================= */
 .branch-card-detail {
-  margin: 0 0 10px 0;
+  margin: 0 0 10px 0; 
   padding: 14px 18px;
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.94), rgba(255,247,215,.92)),
-    linear-gradient(135deg, rgba(255,214,90,.32), rgba(82,200,255,.20));
-  border: 1px solid rgba(255,255,255,.96);
-  border-bottom: 2px solid rgba(255,196,0,.55);
-  border-radius: 22px;
-  color: #2a1046;
-  font-size: clamp(14px, 4vw, 17px);
-  line-height: 1.35;
-  font-weight: 900;
+  
+  /* Fondo luminoso: Blanco puro que degrada a un azul hielo muy sutil */
+  background: linear-gradient(135deg, #ffffff 0%, #e0f2fe 100%);
+  
+  /* Bordes tridimensionales para aspecto de placa premium */
+  border: 1px solid #ffffff;
+  border-bottom: 2px solid #bae6fd;
+  border-radius: 20px;
+  
+  /* Texto oscuro (Azul noche/Casi negro) para legibilidad extrema */
+  color: #031024; 
+  font-size: clamp(14px, 4vw, 17px); 
+  line-height: 1.35; 
+  font-weight: 900; 
   text-align: center;
   letter-spacing: 0.2px;
-  box-shadow:
-    0 12px 26px rgba(0,0,0,.34),
-    0 0 28px rgba(255,214,90,.18),
-    inset 0 -8px 16px rgba(255,184,0,.10),
-    inset 0 4px 10px rgba(255,255,255,.85);
-  flex: 0 0 auto;
-  word-break: break-word;
+  
+  /* MAGIA ESTÁTICA: Resplandor interior y exterior */
+  box-shadow: 
+    0 10px 25px rgba(0, 0, 0, 0.5), /* Sombra negra profunda para que "flote" */
+    0 0 30px rgba(11, 92, 255, 0.4), /* Aura azulada estática proyectada hacia afuera */
+    inset 0 -5px 15px rgba(11, 92, 255, 0.15), /* Resplandor artificial interior */
+    inset 0 4px 10px rgba(255, 255, 255, 0.8); /* Reflejo de luz superior */
+    
+  flex: 0 0 auto; 
+  word-break: break-word; 
   overflow-wrap: break-word;
 }
-
 
 /* Contenedor de Imagen: Fluye naturalmente con el tamaño de la imagen */
 .branch-thumb {
@@ -1281,16 +1191,14 @@ body.search-has-text #raffles{ display:none !important; }
 
 /* IMAGEN: Toma el 100% del ancho y crece hacia abajo proporcionalmente */
 .branch-thumb img {
-  position: relative;
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  border-radius: 18px;
-  border: 1px solid rgba(255,255,255,.14);
-  filter: drop-shadow(0 12px 24px rgba(0,0,0,.46)) drop-shadow(0 0 22px rgba(255,214,90,.10));
+  position: relative; /* Volvemos a relativo para que dicte el alto de la tarjeta */
+  width: 100%; /* Prioridad absoluta al ancho */
+  height: auto; /* Mantiene la proporción perfecta original de tu flyer */
+  object-fit: contain; 
+  border-radius: 16px; 
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
   transition: transform 0.3s cubic-bezier(.34,1.56,.64,1);
 }
-
 
 .branch-card:active .branch-thumb img, .branch-card.is-entering .branch-thumb img {
   transform: scale(1.02);
