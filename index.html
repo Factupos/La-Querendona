@@ -1670,17 +1670,26 @@ body.search-has-text #raffles{ display:none !important; }
 }
 .branch-tap-hand-wrap{
   position: absolute;
-  right: -18px;
-  top: 11px;
+  /* Ajuste leve de posición para centrar el nuevo difuminado */
+  right: -14px;
+  top: 9px;
   width: 128px;
   height: 172px;
   transform-origin: 60% 88%;
   animation: branchTapHandFloat 2.5s ease-in-out infinite;
-  /* --- AÑADE ESTAS DOS LÍNEAS 👇 --- */
-  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.98) 60%, rgba(0,0,0,0) 100%);
-  mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.98) 60%, rgba(0,0,0,0) 100%);
-}
-.branch-tap-hand-image{
+  
+  /* =========================================================
+     🏆 MÁSCARA "COOKIE CUTTER" PREMIUM - ELIMINA EL CUADRADO 🏆
+     ========================================================= */
+  /* Esta máscara mantiene el centro opaco y difumina agresivamente 
+     los 4 bordes del recuadro, eliminando cualquier rastro cuadrado. */
+  -webkit-mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 48%, rgba(0,0,0,0) 86%);
+  mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 48%, rgba(0,0,0,0) 86%);
+  
+  /* Asegura que la máscara se estire correctamente */
+  mask-size: cover;
+  -webkit-mask-size: cover;
+}anch-tap-hand-image{
   width:100%;
   height:100%;
   object-fit: contain;
