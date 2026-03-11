@@ -2228,7 +2228,7 @@ header{
 .winners-premium-btn .button-wrapper::before{
   content:"";
   position:absolute;
-  inset: 24px 64px; /* <--- Ajustado para que no se expanda tanto */
+  inset: 18px 54px; /* <--- Ajustado para que no se expanda tanto */
   border-radius:999px;
   background: radial-gradient(circle at center, rgba(255, 215, 0, 0.25), rgba(0, 229, 255, 0.08) 55%, transparent 75%);
   filter: blur(8px);
@@ -2245,7 +2245,7 @@ header{
   pointer-events:none;
   z-index:1;
   overflow:visible;
-  transform: scale(0.85); /* <--- Reducido para que las órbitas no superen la margen */
+ /* <--- Reducido para que las órbitas no superen la margen */
 }
 
 .winners-premium-btn .orbit-dark{
@@ -2496,19 +2496,19 @@ header{
   .branch-topbar{ grid-template-columns: minmax(0, 1fr) 240px; min-height: 104px; margin-bottom: 14px; column-gap: 8px; }
   .winners-premium-btn{ width: 240px; height: 78px; transform: translate3d(-16px, 0, 0); }
   .winners-premium-btn .button-wrapper{ width: 216px; height: 78px; }
-  .winners-premium-btn .button-wrapper::before{ inset: 18px 52px; filter: blur(8px); }
+  .winners-premium-btn .button-wrapper::before{ inset: 14px 42px; filter: blur(8px); }
   .winners-premium-btn .winner-btn{ min-width: 146px; height: 42px; padding: 0 19px; font-size: 13.6px; letter-spacing: 1.28px; }
   .winners-premium-btn .winner-btn::after{ top: 3px; left: 8px; right: 8px; }
   .winners-premium-btn .inner-glow{ inset: 5px 9px; filter: blur(6px); }
   .winners-premium-btn .ambient-reflection{ left: 38px; right: 38px; bottom: 5px; height: 11px; filter: blur(8px); }
-  .winners-premium-btn .orbits-svg{ transform: scale(0.85); }
+  .winners-premium-btn .orbits-svg{ transform: scale(1.01); }
 }
 
 @media (max-width: 560px){
   .branch-topbar{ grid-template-columns: minmax(0, 1fr) 210px; min-height: 96px; column-gap: 8px; }
   .winners-premium-btn{ width: 210px; height: 68px; transform: translate3d(-12px, 0, 0); }
   .winners-premium-btn .button-wrapper{ width: 188px; height: 68px; }
-  .winners-premium-btn .button-wrapper::before{ inset: 16px 44px; }
+  .winners-premium-btn .button-wrapper::before{ inset: 12px 36px; }
   .winners-premium-btn .winner-btn{ min-width: 128px; height: 37px; padding: 0 16px; font-size: 11.8px; letter-spacing: 1.05px; }
   .winners-premium-btn .ambient-reflection{ left: 32px; right: 32px; }
 }
