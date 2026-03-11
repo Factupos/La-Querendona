@@ -90,7 +90,8 @@ body::after {
   mix-blend-mode: overlay;
 }
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-html,body{height:100%} html{overflow-anchor:none}
+html, body { height: 100%; overflow-x: hidden; overscroll-behavior-x: none; } 
+html { overflow-anchor: none; }
 body {
   margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color: var(--ink); background: transparent;
@@ -1036,7 +1037,7 @@ body.search-has-text #raffles{ display:none !important; }
 .branch-mode{padding-top:0 !important;padding-bottom:0 !important;overflow:hidden}
 
 .branch-shell{
-  position:fixed; inset:0; z-index:99997; display:none; overflow:auto;
+  position:fixed; inset:0; z-index:99997; display:none; overflow-x:hidden; overflow-y:auto; background-attachment:fixed;
   background:
     radial-gradient(100vw 100vh at 0% 0%, rgba(0,212,106,.15) 0, transparent 60%),
     radial-gradient(100vw 100vh at 100% 0%, rgba(11,92,255,.18) 0, transparent 62%),
@@ -2291,6 +2292,7 @@ header{
     radial-gradient(1100px 840px at 100% 0%, rgba(31,107,255,.20) 0, transparent 58%),
     radial-gradient(980px 760px at 50% 100%, rgba(255,191,60,.10) 0, transparent 64%),
     linear-gradient(135deg, #06101d 0%, #0a1c35 55%, #07111f 100%) !important;
+  background-attachment: fixed !important;
 }
 .branch-main-title{
   text-shadow:0 12px 28px rgba(0,0,0,.24) !important;
