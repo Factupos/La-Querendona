@@ -1670,7 +1670,7 @@ body.search-has-text #raffles{ display:none !important; }
 }
 .branch-tap-hand-wrap{
   position: absolute;
-  /* Ajuste de posición final para centrar la mano sobre el halo */
+  /* Ajuste leve de posición para centrar el nuevo difuminado */
   right: -14px;
   top: 9px;
   width: 128px;
@@ -1679,26 +1679,12 @@ body.search-has-text #raffles{ display:none !important; }
   animation: branchTapHandFloat 2.5s ease-in-out infinite;
   
   /* =========================================================
-     🏆 MÁSCARA COMPUESTA PREMIUM - SOLUCIÓN TOTAL 🏆
+     🏆 MÁSCARA "COOKIE CUTTER" PREMIUM - ELIMINA EL CUADRADO 🏆
      ========================================================= */
-  
-  /* 1. MÁSCARA PRINCIPAL (Mantiene brillo, borra el borde inferior) */
-  /* Es 100% sólida desde el principio (dedos) hasta el 80% de la altura (palma), 
-     manteniendo todo el "brillo". Luego, del 80% al 100%, se difumina de golpe, 
-     borrando la línea de corte recta por completo. */
-  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
-  mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
-  
-  /* 2. MÁSCARA SECUNDARIA (Vignette para las esquinas cuadradas laterales) */
-  /* Mantenemos un difuminado elíptico lateral suave para que el "cuadrado transparente" 
-     tampoco se note en los lados, sin tocar la opacidad central de la mano. */
-  background: 
-    radial-gradient(ellipse at 50% 45%, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 72%, rgba(0,0,0,0) 98%);
-  
-  /* 3. COMPOSICIÓN DE MÁSCARAS */
-  /* Le decimos al navegador que combine ambas máscaras para obtener lo mejor de los dos mundos. */
-  -webkit-mask-composite: source-in; /* Para navegadores basados en Webkit/Chrome */
-  mask-composite: intersect;       /* Estándar CSS moderno */
+  /* Esta máscara mantiene el centro opaco y difumina agresivamente 
+     los 4 bordes del recuadro, eliminando cualquier rastro cuadrado. */
+  -webkit-mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 48%, rgba(0,0,0,0) 86%);
+  mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 48%, rgba(0,0,0,0) 86%);
   
   /* Asegura que la máscara se estire correctamente */
   mask-size: cover;
