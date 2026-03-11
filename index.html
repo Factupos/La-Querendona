@@ -1635,11 +1635,38 @@ body.search-has-text #raffles{ display:none !important; }
   position:absolute;
   inset: 4px 8px 10px 12px;
   border-radius: 999px;
-  background:
-    radial-gradient(circle at 56% 30%, rgba(255,215,0,.28) 0%, rgba(255,215,0,.16) 24%, rgba(255,215,0,0) 58%),
-    radial-gradient(circle at 60% 62%, rgba(0,229,255,.26) 0%, rgba(0,229,255,.15) 28%, rgba(0,229,255,0) 64%);
+  /* --- CAMBIO AQUÍ: Elimina el degradado problemático --- */
+  background: none;
   filter: blur(16px);
   opacity: .88;
+}
+
+   /* --- CAMBIO AQUÍ: Añade esta nueva regla para el brillo limpio --- */
+.branch-tap-glow{
+  position: absolute;
+  /* Centrado relativo al contenedor de la mano */
+  left: 10px;
+  top: 10px;
+  width: 130px;
+  height: 180px;
+  border-radius: 999px;
+  /* Un brillo limpio y localizado, similar a la mano de scroll */
+  background:
+    radial-gradient(circle at 50% 20%, rgba(255,215,0,.28) 0%, rgba(255,215,0,.16) 24%, rgba(255,215,0,0) 50%),
+    radial-gradient(circle at 55% 55%, rgba(0,229,255,.24) 0%, rgba(0,229,255,.14) 30%, rgba(0,229,255,0) 60%),
+    radial-gradient(circle at 50% 80%, rgba(213,0,249,.15) 0%, rgba(213,0,249,0) 70%);
+  filter: blur(16px);
+  /* Mantiene el brillo y la luminosidad requeridos */
+  opacity: 1;
+  pointer-events: none;
+  z-index: -1; /* Renderizar detrás de la imagen de la mano */
+  animation: branchTapGlowBreath 3s ease-in-out infinite;
+}
+
+/* --- CAMBIO AQUÍ: Añade esta animación sutil para el brillo --- */
+@keyframes branchTapGlowBreath {
+  0%, 100% { opacity: 0.8; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.03); }
 }
 .branch-tap-hand-wrap{
   position: absolute;
@@ -2712,6 +2739,7 @@ header{
       <span class="branch-tap-ripple r3"></span>
       <span class="branch-tap-core"></span>
     </div>
+    <div class="branch-tap-glow"></div>
     <div class="branch-tap-hand-wrap" aria-hidden="true">
       <img
         class="branch-tap-hand-image"
